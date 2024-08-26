@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>C A L C U L A D O R A</h1>
+    <div class="calculator">
+        <form id="calculatorForm">
+          <input type="number" id="num1" placeholder="Ingrese el primer número">
+          <input type="number" id="num2" placeholder="Ingrese el segundo número">
+          <div class="buttons">
+            <br>
+            <button type="button" onclick="sum()">Sumar</button> 
+            <script>
+                function sum() {
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let resultado = num1+num2;
+                document.getElementById("resultado").value = resultado;
+            }
+              </script>
+            <button type="button" onclick="res()">Restar</button>
+            <script>
+                function res() {
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let resultado = num1-num2;
+                document.getElementById("resultado").value = resultado;
+            }
+              </script>
+            <button type="button" onclick="mult()">Multiplicar</button>
+             <script>
+                function mult() {
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let resultado = num1*num2;
+                document.getElementById("resultado").value = resultado;
+            }
+              </script>
+            <button type="button" onclick="div()">Dividir</button>
+            <script>
+                function div() {
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let resultado = num1/num2;
+                document.getElementById("resultado").value = resultado;
+            }
+              </script>
+               <button type="button" onclick="elevar()">Elevar</button>
+               <script>
+                   function elevar() {
+                   let num1 = parseFloat(document.getElementById('num1').value);
+                   let num2 = parseFloat(document.getElementById('num2').value);
+                   let resultado = Math.pow(num1, num2);
+                   document.getElementById("resultado").value = resultado;
+               }
+                 </script>
+              <br>
+              <br>
+            <input type="text" onclick="resultado" id="resultado" placeholder="Resultado">
+          
+          <br>
+          
+        </form>
+      </div>
+      
+</body>
+</html>
